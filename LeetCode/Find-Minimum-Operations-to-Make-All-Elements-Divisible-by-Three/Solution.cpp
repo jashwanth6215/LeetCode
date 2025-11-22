@@ -1,12 +1,14 @@
-int minimumOperations(int* arr, int n) 
-{
-    int c=0;
-    for(int i=0;i<n;i++)
-    {
-        if(arr[i]%3!=0)
+class Solution {
+public:
+    int minimumOperations(vector<int>& nums) {
+        int c=0;
+        for(auto &i:nums)
         {
-            c++;
+            if(i%3!=0)
+            {
+                c++;
+            }
         }
+        return c;
     }
-    return c;
-}
+};
