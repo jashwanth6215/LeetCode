@@ -1,0 +1,1 @@
+mirrorDistance = n => Math.abs(n - +[...`${n}`].reverse().join``);
