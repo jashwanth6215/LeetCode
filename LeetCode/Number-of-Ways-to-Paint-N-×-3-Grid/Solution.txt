@@ -1,0 +1,14 @@
+1class Solution:
+2    def numOfWays(self, n: int) -> int:
+3        MOD = 10**9 + 7
+4
+5        type1 = 6
+6        type2 = 6
+7
+8        for _ in range(2, n + 1):
+9            new_type1 = (2 * type1 + 2 * type2) % MOD
+10            new_type2 = (2 * type1 + 3 * type2) % MOD
+11            type1, type2 = new_type1, new_type2
+12
+13        return (type1 + type2) % MOD
+14
